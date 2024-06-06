@@ -11,6 +11,7 @@ def run(playwright: Playwright) -> None:
     login_page = LoginPage(page)
     page.set_viewport_size({"width": 1500, "height": 1080})
     page.goto("https://sam.clarussoftware.co.uk/login")
+    page.pause()
     expect(login_page.email).to_be_visible()
     page.get_by_label("email").click()
     page.get_by_label("email").fill("sam.stringer@clarussoftware.co.uk")
