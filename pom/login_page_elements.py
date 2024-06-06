@@ -1,6 +1,6 @@
 
 
-class HomePage:
+class LoginPage:
 
     def __init__(self, page):
         self.sign_in_button = page.get_by_role("button", name="Sign In")
