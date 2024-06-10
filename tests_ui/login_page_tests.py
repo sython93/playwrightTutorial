@@ -13,6 +13,7 @@ def run(playwright: Playwright) -> None:
     page.goto("https://sam.clarussoftware.co.uk/login")
     page.pause()
     expect(login_page.email).to_be_visible()
+    login_page.submit_login("sam.stringer@clarussoftware.co.uk", "Ssasrl30132543!")
     page.get_by_label("email").click()
     page.get_by_label("email").fill("sam.stringer@clarussoftware.co.uk")
     page.get_by_label("password").click()

@@ -8,5 +8,5 @@ class LoginPage:
         self.password = page.get_by_label("password")
 
     def submit_login(self, email, password):
-        self.page.get_by_label("email").fill("sam.stringer@clarussoftware.co.uk")
-        self.page.get_by_label("password").fill("Ssasrl30132543!")
+        self.page.get_by_label("email").fill(email)
+        self.page.get_by_label("password").fill(password)
